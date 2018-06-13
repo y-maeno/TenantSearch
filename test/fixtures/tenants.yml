@@ -1,0 +1,51 @@
+#read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  company: 株式会社コメダ
+  name: 田中
+  shop: コメダ珈琲店
+  min_size: 35
+  max_size: 60
+  floor: false
+  restaurant: true
+
+two:
+  id: 2
+  company: 株式会社ウェルネスフロンティア
+  name: 佐藤
+  shop: ジョイフィット
+  min_size: 70
+  max_size: 200
+  floor: false
+  restaurant: false
+
+three:
+  id: 3
+  company: サンマルクホールディングス
+  name: 鈴木
+  shop: サンマルクカフェ
+  min_size: 30
+  max_size: 90
+  floor: true
+  restaurant: true
+
+four:
+  id: 4
+  company: 株式会社セブン-イレブン・ジャパン
+  name: 小林
+  shop: セブンイレブン
+  min_size: 50
+  max_size: 60
+  floor: true
+  restaurant: false
+
+five:
+  id: 5
+  company: 株式会社すかいらーく
+  name: 吉田
+  shop: から好し
+  min_size: 15
+  max_size: 30
+  floor: true
+  restaurant: true

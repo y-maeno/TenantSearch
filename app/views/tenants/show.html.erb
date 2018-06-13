@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>会社名:</strong>
+  <%= @tenant.company %>
+</p>
+
+<p>
+  <strong>担当者:</strong>
+  <%= @tenant.name %>
+</p>
+
+<p>
+  <strong>店舗名:</strong>
+  <%= @tenant.shop %>
+</p>
+
+<p>
+  <strong>広さ:</strong>
+  <%= @tenant.min_size %>坪〜<%= @tenant.max_size %>坪
+</p>
+
+<p>
+  <strong>フロア:</strong>
+  <% if @tenant.floor == true %>
+    １階限定
+  <% else %>
+    何階でも可
+  <% end %>
+</p>
+
+<p>
+  <strong>業種:</strong>
+  <% if @tenant.restaurant == true %>
+    飲食店
+  <% else %>
+    飲食店以外
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_tenant_path(@tenant) %> |
+<%= link_to 'Back', tenants_path %>
