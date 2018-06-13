@@ -1,14 +1,14 @@
 <h1>物件情報</h1>
 <%= search_form_for @q, url:search_path, method: :get do |f| %>
   <div class="field">
-    <%= f.label :min_size_lt, '広さ：' %>
-    <input type="hidden" value="" name="q[max_size_gt]"><br>
-    <%= f.number_field :min_size_lt %><br>
+    <%= f.label :min_size_lteq, '広さ：' %>
+    <input type="hidden" value="" name="q[max_size_gteq]"><br>
+    <%= f.number_field :min_size_lteq %><br>
     <script>
       $(function(){
-        $("input[name='q[min_size_lt]']").change(function(){
+        $("input[name='q[min_size_lteq]']").change(function(){
           console.log("a");
-          $("input[name='q[max_size_gt]']").val($("input[name='q[min_size_lt]']").val());
+          $("input[name='q[max_size_gteq]']").val($("input[name='q[min_size_lteq]']").val());
         });
       });
     </script>
