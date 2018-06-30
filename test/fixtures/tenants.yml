@@ -7,8 +7,8 @@ one:
   shop: コメダ珈琲店
   min_size: 35
   max_size: 60
-  floor: false
-  restaurant: true
+  floor: 0
+  restaurant: food
 
 two:
   id: 2
@@ -17,8 +17,8 @@ two:
   shop: ジョイフィット
   min_size: 70
   max_size: 200
-  floor: false
-  restaurant: false
+  floor: 0
+  restaurant: service
 
 three:
   id: 3
@@ -27,8 +27,8 @@ three:
   shop: サンマルクカフェ
   min_size: 30
   max_size: 90
-  floor: true
-  restaurant: true
+  floor: 1
+  restaurant: food
 
 four:
   id: 4
@@ -37,8 +37,8 @@ four:
   shop: セブンイレブン
   min_size: 50
   max_size: 60
-  floor: true
-  restaurant: false
+  floor: 1
+  restaurant: shop
 
 five:
   id: 5
@@ -47,5 +47,5 @@ five:
   shop: から好し
   min_size: 15
   max_size: 30
-  floor: true
-  restaurant: true
+  floor: 1
+  restaurant: food

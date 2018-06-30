@@ -1,5 +1,5 @@
 <h1>物件情報</h1>
-<%= search_form_for @q, url:search_path, method: :get do |f| %>
+<%= search_form_for @q, url:search_path do |f| %>
   <div class="field">
     <%= f.label :min_size_lteq, '広さ：' %>
     <input type="hidden" value="" name="q[max_size_gteq]"><br>
@@ -16,20 +16,22 @@
 
   <div class="field">
     <%= f.label :floor, '階数：' %>
-    <label><%= f.radio_button :floor_eq, '' %>指定なし</label>
-    <label><%= f.radio_button :floor_eq, true %>１階</label>
-    <label><%= f.radio_button :floor_eq, false %>地下・空中階</label>
+    <label><%= f.radio_button :floor_eq, '', {} %>１階</label>
+    <label><%= f.radio_button :floor_eq, '0', {} %>地下・空中階</label>
   </div>
 
   <div class="field">
 
     <%= f.label :restaurant, '業種：' %>
-    <label><%= f.radio_button :restaurant_eq, '' %>指定なし</label>
-    <label><%= f.radio_button :restaurant_eq, true %>飲食店OK</label>
-    <label><%= f.radio_button :restaurant_eq, false %>飲食店NG</label>
+    <label><%= f.radio_button :restaurant_not_eq, '', {} %>飲食店OK</label>
+    <label><%= f.radio_button :restaurant_not_eq, 'food', {} %>飲食店NG</label>
   </div>
 
   <div class="actions">
     <%= f.submit '検索' %>
   </div>
 <% end %>
+
+<!-- <%# if @tenants.any? %>
+  <%#= render @tenants %>
+<%# end %> -->

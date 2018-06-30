@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_124017) do
+ActiveRecord::Schema.define(version: 2018_06_18_104301) do
 
   create_table "tenants", force: :cascade do |t|
     t.string "company"
@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2018_06_05_124017) do
     t.text "shop"
     t.integer "min_size"
     t.integer "max_size"
-    t.boolean "floor"
-    t.boolean "restaurant"
+    t.string "floor"
+    t.string "restaurant"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -18,14 +18,14 @@
       <td><%= tenant.shop %></td>
       <td><%= tenant.min_size %>〜<%= tenant.max_size %>坪</td>
       <td>
-        <% if tenant.floor == true %>
+        <% if tenant.floor == '1' %>
           １階限定
         <% else %>
           何階でも可
         <% end %>
       </td>
       <td>
-        <% if tenant.restaurant == true %>
+        <% if tenant.restaurant == 'food'%>
           飲食店
         <% else %>
           飲食店以外
